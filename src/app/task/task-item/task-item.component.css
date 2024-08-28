@@ -1,0 +1,79 @@
+.task-item {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .task-item h3 {
+    margin: 0 0 5px;
+  }
+  
+  .task-item p {
+    margin: 0 0 10px;
+  }
+  
+  .task-item .status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #fff;
+    margin-left: 230px;
+    padding: 16px;
+  }
+  
+  .task-item .status.open {
+    background-color: #f44336; /* Red */
+  }
+  
+  .task-item .status.in-progress {
+    background-color: #ff9800; /* Orange */
+  }
+  
+  .task-item .status.done {
+    background-color: #4caf50; /* Green */
+  }
+  /* General styling for the select dropdown */
+select {
+    width: 150px; /* Adjust width as needed */
+    padding: 15px; /* Padding inside the select box */
+    font-size: 14px; /* Font size of the text */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light gray border */
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Text color */
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative; /* Ensure position can be adjusted if needed */
+  width: 100px;
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  /* Styling for the dropdown arrow */
+  select::after {
+    content: '▼'; /* Add custom arrow */
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  /* Styling for the options inside the dropdown */
+  select option {
+    background-color: white; /* Background for options */
+    padding: 0px; /* Padding inside each option */
+  }
+  
+  /* Hover and focus styles */
+  select:hover, select:focus {
+    border-color: #007bff; /* Change border color on hover/focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add subtle shadow */
+  }
+  
+  select:focus {
+    outline: none; /* Remove default outline on focus */
+  }
+  

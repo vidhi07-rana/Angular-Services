@@ -1,0 +1,64 @@
+form {
+    background-color: #211f1f; /* Dark background for the card */
+    border-radius: 8px;
+    border: 1px solid #ccc; /* Light border for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 450px;
+    height: 350px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align content in the center */
+    margin-bottom: 30px; /* Increased space below the form */
+}
+
+p {
+    margin: 10px 0;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #fff; /* White text for better contrast */
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #333; /* Darker input background for consistency */
+    color: #fff; /* White text inside inputs */
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f44336;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    width: fit-content;
+    margin-left: 270px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#action {
+    text-align: center;
+    width: 100%;
+}

@@ -1,0 +1,49 @@
+header {
+    background-color: #211f1f; /* Match the dark background theme */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #fff; /* White text for the header */
+    margin-top: 0; /* Remove top margin if present */
+    margin-bottom: 0; /* Reset bottom margin for better control */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header p {
+    margin: 0;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333; /* Darker background for consistency */
+    color: #fff; /* White text */
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    background-color: #211f1f; /* Dark background for the list item */
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+app-task-item {
+    display: block;
+    color: #fff; /* Ensure task item text is white for contrast */
+}

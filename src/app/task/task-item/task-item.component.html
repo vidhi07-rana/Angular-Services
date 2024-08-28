@@ -1,0 +1,13 @@
+<div class="task-item">
+    <h2>{{ task.title }}</h2>
+    <p>{{ task.description }}</p>
+    <span class="status" [ngClass]="task.status.toLowerCase()">
+      {{ task.status }}
+    </span>
+    <select>
+        <option value="open">Open</option>
+        <option value="in_progress">In_Progress</option>
+        <option value="done">Complete</option>
+    </select>
+  </div>
+  
