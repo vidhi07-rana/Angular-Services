@@ -2,6 +2,7 @@ import { Component, ElementRef, ViewChild, viewChild } from '@angular/core';
 import { TaskService } from '../task.service';
 import { FormsModule } from '@angular/forms';
 import { NgForm } from '@angular/forms';
+import { TaskStatus } from '../task.model';
 @Component({
   selector: 'app-new-task',
   standalone: true,
@@ -20,5 +21,8 @@ export class NewTaskComponent {
     if (this.formEl) {
       this.formEl.resetForm(); // Reset both form values and state
     }
+  }
+  updateTask(taskId:string,newStatus:TaskStatus ){
+  this.taskService.updateTaskStatus(taskId,newStatus)
   }
 }

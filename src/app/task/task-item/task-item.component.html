@@ -1,13 +1,24 @@
-<div class="task-item">
-    <h2>{{ task.title }}</h2>
-    <p>{{ task.description }}</p>
-    <span class="status" [ngClass]="task.status.toLowerCase()">
-      {{ task.status }}
-    </span>
-    <select>
-        <option value="open">Open</option>
-        <option value="in_progress">In_Progress</option>
-        <option value="done">Complete</option>
+<div class="task-item" style="border: 1px solid red; padding: 10px;">
+  <h2>
+    {{ task.title }}
+    <button *ngIf="statusChanged" class="status-change-indicator">
+      Status Changed
+    </button>
+  </h2>
+  <p>{{ task.description }}</p>
+  <div class="status-container">
+    <select
+      class="task-status-dropdown"
+      (change)="onChangeTaskStatus(task.id, getSelectValue($event))"
+    >
+    <option value="" [selected]="task.status === ''">Select Any</option>
+
+      <option value="open" [selected]="task.status === 'OPEN'">Open</option>
+      <option value="in_progress" [selected]="task.status === 'IN_PROGRESS'">In Progress</option>
+      <option value="done" [selected]="task.status === 'DONE'">Complete</option>
     </select>
+    <button class="status-button" [ngClass]="task.status.toLowerCase()">
+      Change Status
+    </button>
   </div>
-  
+</div>

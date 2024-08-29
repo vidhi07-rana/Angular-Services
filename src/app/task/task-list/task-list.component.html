@@ -1,19 +1,19 @@
 <header>
-    <h2>Mytask</h2>
-    <p>
-      <select (change)="onChangeFilter(filter.value)" #filter>
-        <option value="all">All</option>
-        <option value="open">Open</option>
-        <option value="in-progress">In-Progress</option>
-        <option value="done">Completed</option>
-      </select>
-    </p>
-  </header>
+  <h2>Mytask</h2>
+  <p>
+    <select (change)="onChangeFilter(filter.value)" #filter>
+      <option value="all">All</option>
+      <option value="open">Open</option>
+      <option value="in-progress">In-Progress</option>
+      <option value="done">Completed</option>
+    </select>
+  </p>
+</header>
 
     <ul>
         @for(task of tasks(); track task.id){
             <li>
-                <app-task-item [task]="task"></app-task-item>
+              <app-task-item [task]="task"></app-task-item>
             </li>
         }
     </ul>

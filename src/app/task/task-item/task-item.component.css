@@ -1,79 +1,159 @@
 .task-item {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .task-item h3 {
-    margin: 0 0 5px;
-  }
-  
-  .task-item p {
-    margin: 0 0 10px;
-  }
-  
-  .task-item .status {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 4px;
-    color: #fff;
-    margin-left: 230px;
-    padding: 16px;
-  }
-  
-  .task-item .status.open {
-    background-color: #f44336; /* Red */
-  }
-  
-  .task-item .status.in-progress {
-    background-color: #ff9800; /* Orange */
-  }
-  
-  .task-item .status.done {
-    background-color: #4caf50; /* Green */
-  }
-  /* General styling for the select dropdown */
-select {
-    width: 150px; /* Adjust width as needed */
-    padding: 15px; /* Padding inside the select box */
-    font-size: 14px; /* Font size of the text */
-    border-radius: 4px; /* Rounded corners */
-    border: 1px solid #ccc; /* Light gray border */
-    background-color: #f9f9f9; /* Light background color */
-    color: #333; /* Text color */
-    appearance: none; /* Remove default dropdown arrow */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    position: relative; /* Ensure position can be adjusted if needed */
-  width: 100px;
-    cursor: pointer; /* Change cursor to pointer */
-  }
-  
-  /* Styling for the dropdown arrow */
-  select::after {
-    content: '▼'; /* Add custom arrow */
-    font-size: 12px;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none;
-  }
-  
-  /* Styling for the options inside the dropdown */
-  select option {
-    background-color: white; /* Background for options */
-    padding: 0px; /* Padding inside each option */
-  }
-  
-  /* Hover and focus styles */
-  select:hover, select:focus {
-    border-color: #007bff; /* Change border color on hover/focus */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add subtle shadow */
-  }
-  
-  select:focus {
-    outline: none; /* Remove default outline on focus */
-  }
-  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.task-item h2 {
+  margin: 0 0 5px;
+}
+
+.task-item p {
+  margin: 0 0 10px;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+}
+
+.status-button {
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  background-color: #f44336; /* Initial background color (red) */
+  cursor: pointer;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.status-button.open {
+  background-color: #f44336; /* Red */
+}
+
+.status-button.in_progress {
+  background-color: #ff9800; /* Orange */
+}
+
+.status-button.done {
+  background-color: #4caf50; /* Green */
+}
+
+.task-status-dropdown {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+}
+.status-indicator {
+  background-color: yellow;
+  color: black;
+  padding: 2px 6px;
+  margin-left: 10px;
+  font-size: 0.9em;
+  border-radius: 3px;
+}
+/* Style for the "Status Changed" button */
+.status-change-indicator {
+  background-color: green; /* Green background */
+  color: white; /* White text */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: default; /* Cursor is default to indicate it's not clickable */
+  font-size: 14px;
+}
+
+/* Disable the "Change Status" button when status is changed */
+.status-button:disabled {
+  background-color: grey; /* Grey background for disabled state */
+  color: #ccc; /* Lighter text color */
+  cursor: not-allowed; /* Not-allowed cursor */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.task-item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px; /* Increased padding for more space around the content */
+  margin-bottom: 10px;
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Added gap to increase the distance between dropdown and button */
+}
+
+.status-button {
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  background-color: #f44336; /* Initial background color (red) */
+  cursor: pointer;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.status-button.open {
+  background-color: #f44336; /* Red */
+}
+
+.status-button.in_progress {
+  background-color: #ff9800; /* Orange */
+}
+
+.status-button.done {
+  background-color: #4caf50; /* Green */
+}
+
+.task-status-dropdown {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.status-indicator {
+  background-color: yellow;
+  color: black;
+  padding: 2px 6px;
+  margin-left: 10px;
+  font-size: 0.9em;
+  border-radius: 3px;
+}
+
+/* Style for the "Status Changed" button */
+.status-change-indicator {
+  background-color: green; /* Green background */
+  color: white; /* White text */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: default; /* Cursor is default to indicate it's not clickable */
+  font-size: 14px;
+}
+
+/* Disable the "Change Status" button when status is changed */
+.status-button:disabled {
+  background-color: grey; /* Grey background for disabled state */
+  color: #ccc; /* Lighter text color */
+  cursor: not-allowed; /* Not-allowed cursor */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+
