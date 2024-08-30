@@ -10,6 +10,6 @@ export class LoginService {
 
   log(message:string ){
     const timeStamp = new Date().toLocaleTimeString()
-    console.log(`[${timeStamp}]: ${message}`)
+    console.log(`[${timeStamp}]: ${message} `)
   }
 }

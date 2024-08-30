@@ -12,6 +12,7 @@ import { TaskService } from '../task.service';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task!: Task;
+  // private taskService = inject(TasksServiceToken);
   private taskService = inject(TaskService);
   originalStatus!: TaskStatus;
   statusChanged: boolean = false;

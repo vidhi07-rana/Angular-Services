@@ -14,6 +14,8 @@ export class NewTaskComponent {
   @ViewChild('taskForm') formEl!: NgForm;
 
   constructor(private taskService: TaskService) {}
+  // constructor(@Inject(TasksServiceToken) private taskService: TaskService) {}
+
 
   onAddTask(title: string, description: string) {
     this.taskService.addTask({ title, description });
